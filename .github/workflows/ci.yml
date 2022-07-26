@@ -45,3 +45,5 @@ jobs:
       run: aws eks update-kubeconfig --name EKS-course-cluster --region us-east-1
     - name: Validate kubectl
       run: kubectl get pods
+    - name: Deploy manifests
+      run: kubectl apply -f deployment.yml service.yml

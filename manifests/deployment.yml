@@ -1,9 +1,9 @@
-apiVersion : apps/v1beta1
+apiVersion : apps/v1
 kind: Deployment
 metadata:
   name: "hello-world"
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
         - name: "hello-world"
-          image: "anraghunCR.azurecr.io/nodejs-hello-world"
+          image: "akshita5/simplewhale:latest"
           ports:
           - containerPort: 1337
